@@ -4,15 +4,7 @@ import TodoList from './TodoList';
 
 interface IProps{}
 
-interface ITodo{
-    id : number;
-    content : string;
-    done : boolean;
-}
-
-interface IState{
-    todos : ITodo[];
-}
+interface IState{}
 
 class TodoTemplate extends React.Component<IProps, IState> {
     render() {
