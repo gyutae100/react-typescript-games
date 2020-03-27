@@ -1,10 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TodoApp from './Todos/TodoApp';
+
+import A2 from './TodoApp'
 
 function App() {
-  return <TodoApp />
+  return (
+      <A2 />
+  );
 }
 
 export default App;
