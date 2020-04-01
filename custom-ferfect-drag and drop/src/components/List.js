@@ -99,11 +99,11 @@ class List extends React.Component {
 
     const childElementCount = e.target.parentNode.childElementCount -2;
 
-    console.log("capiedTo",capiedTo);
-    console.log("to",to);
-    console.log("from",from);
-    console.log("childElementCount",childElementCount);
-    console.log("currentDragDirection",this.currentDragDirection);
+    // console.log("capiedTo",capiedTo);
+    // console.log("to",to);
+    // console.log("from",from);
+    // console.log("childElementCount",childElementCount);
+    // console.log("currentDragDirection",this.currentDragDirection);
 
 
     //방향 재설정
@@ -177,11 +177,8 @@ class List extends React.Component {
     }
  }
   
-
-
-
 	render() {
-    const listItems = this.state.datas.map((item, i) => {
+    const listItems = [...this.state.datas].map((item, i) => {
       return (
         <li 
           data-id={i}
@@ -191,11 +188,11 @@ class List extends React.Component {
           onDragStart={this.dragStart.bind(this)}
           onDragOver={this.dragOver.bind(this)} 
         >
-          {item}
+          
+          {item[this.state.displayedProp]}
         </li>
       )
      });
-
 		return (
             <ul>
               {listItems}
@@ -207,13 +204,39 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			datas: ['0','1','2','3','4','5']
-		}
+			datas: [
+        {
+          id:0,
+          name:"name 0",
+          title:"title 0"
+        },
+        {
+          id:1,
+          name:"name 1",
+          title:"title 1"
+        },
+        {
+          id:2,
+          name:"name 2",
+          title:"title 2"
+        },
+        {
+          id:0,
+          name:"name 3",
+          title:"title 3"
+        },
+        {
+          name:"name 4",
+          title:"title 4"
+        }
+      ],
+      displayedProp:"title"
+    }
 	}
 	render() {
 		return (
 			<div>
-        <List datas={this.state.datas} />	
+        <List datas={this.state.datas} displayedProp={this.state.displayedProp}/>	
 			</div>
 		)
 	}
