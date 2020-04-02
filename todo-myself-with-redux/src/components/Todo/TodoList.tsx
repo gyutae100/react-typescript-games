@@ -7,11 +7,10 @@ interface IProps{}
 const TodoList :React.SFC<IProps> = () => {
 
     const todos = useReturnTodoList();
-
     return (
         <div>
             {
-                todos.map((todoItem)=>
+                todos.todos.map((todoItem)=>
                     <TodoListItem key={todoItem.id} todoItem={todoItem} />
                 )
             }

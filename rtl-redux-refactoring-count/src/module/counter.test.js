@@ -32,7 +32,5 @@ describe('<Counter />', ()=>{
             const state3 = counter(undefined,actions.decrease());
             expect(state3).toStrictEqual({number:-1});
         })
-
-
     })
 })
