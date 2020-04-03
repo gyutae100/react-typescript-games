@@ -18,8 +18,17 @@ describe('The useModalManagement hook', () => {
       wrapper: ({ children }) => <Provider store={store} >{children}</Provider>
     });
 
-    console.log(result.current.onInsertTodoItem(3))
-    console.log(store.getState().todos);
+    result.current.onInsertTodoItem(3)
+
+ 
+  });
+
+  it('should describe a closed modal by default', () => {
+
+    const { result } = renderHook(() => useInsertTodoITem(), {
+        wrapper: ({ children }) => <Provider store={store} >{children}</Provider>
+      });
+
  
   });
 });

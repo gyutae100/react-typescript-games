@@ -12,13 +12,10 @@ import { createStore } from 'redux'
 const store = createStore(reducers);
 
 
-describe('The useModalManagement hook', () => {
+describe('ccccccccccccccccccccccc ', () => {
   it('should describe a closed modal by default', () => {
     const { result } = renderHook(() => useReturnTodoList(), {
       wrapper: ({ children }) => <Provider store={store} >{children}</Provider>
-    });
-
-    console.log(result.current)
- 
+    }); 
   });
 });
