@@ -1,0 +1,11 @@
+.App {
+
+  width:100%;
+  border:1px solid black;
+  padding:1rem;
+
+  .Buttons + .Buttons{
+    margin-top: 10px;
+  }
+
+}
