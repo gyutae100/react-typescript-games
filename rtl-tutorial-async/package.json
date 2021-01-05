@@ -6,7 +6,7 @@
     "@testing-library/jest-dom": "^5.1.1",
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^25.1.4",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "axios-mock-adapter": "^1.18.1",
     "jest-dom": "^4.0.0",
     "react": "^16.13.1",
